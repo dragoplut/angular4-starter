@@ -1,0 +1,67 @@
+@import '../../../styles/variables';
+
+.toolbar-container {
+  background-color: $col-neutral-text;
+  color: $col-primary-white;
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  min-width: 768px;
+  z-index: 100;
+  .mat-icon-button {
+    background-color: transparent;
+  }
+  .tool-bar-list-container {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 60px;
+    width: calc(100% - 186px);
+  }
+  .app-logo {
+    background: $col-neutral-placeholder;
+    color: $col-primary-black;
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    line-height: 60px;
+    margin: 0;
+    position: relative;
+    text-align: center;
+    height: 60px;
+    width: 186px;
+  }
+  a {
+    background: transparent;
+    display: inline-block;
+    color: rgba($col-primary-black, 0.5);
+    font-size: $text-navigation;
+    font-weight: 500;
+    height: 60px;
+    line-height: 60px;
+    text-decoration: none;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 15%;
+    min-width: 100px;
+  }
+  a:hover, a.active {
+    color: $col-primary-black;
+  }
+  .toolbar-app-title {
+    cursor: pointer;
+    margin-left: 18px;
+  }
+  .app-current-user {
+    height: 36px;
+  }
+  .toolbar-spacer {
+    flex: 1 1 auto;
+  }
+  .top-menu-item.pull-right fa {
+    margin-left: 6px;
+  }
+}

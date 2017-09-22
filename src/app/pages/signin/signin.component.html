@@ -1,0 +1,55 @@
+<div class="auth row center-xs middle-xs">
+  <form
+      class="signin-form col-xs-6 shadow-2"
+      #authForm="ngForm"
+      (submit)="authenticate()"
+  >
+    <div class="title-container">
+      APP TITLE
+    </div>
+    <div class="warn-container">
+      <span *ngIf="errorMessage" class="warn-message">
+        {{errorMessage}}
+        <i title="Clear" class="fa fa-close" size="lg" (click)="clearError()"></i>
+      </span>
+    </div>
+    <div class="clear-container">
+      <input
+        autofocus="!email"
+        type="email"
+        name="email"
+        required
+        [(ngModel)]="user.email"
+        placeholder="Email"
+        #email="ngModel"
+        autoComplete="new-email"
+      >
+      <input
+        required
+        type="password"
+        name="password"
+        [(ngModel)]="user.password"
+        placeholder="Password"
+        #password="ngModel"
+        autoComplete="new-password"
+      >
+    </div>
+    <div class="actions col-xs-12">
+      <button
+        type="submit"
+        class="btn-large"
+        [disabled]="!authForm.form.valid"
+      >
+        SIGN IN
+      </button>
+      <div class="auth-links-container">
+        <a
+          class="link"
+          (click)="goToReset()"
+        >
+          Forgotten password ?
+        </a>
+      </div>
+    </div>
+  </form>
+</div>

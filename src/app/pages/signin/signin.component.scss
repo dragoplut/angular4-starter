@@ -1,0 +1,75 @@
+@import '../../../styles/variables';
+
+.auth {
+  .signin-form {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    position: absolute;
+    left: calc(50vw - 200px);
+    top: calc(50vh - 120px);
+    height: auto;
+    width: 400px;
+    min-height: 280px;
+    min-width: 400px;
+    text-align: center;
+    vertical-align: middle;
+    input {
+      box-sizing: border-box;
+      border: 1px solid $col-neutral-placeholder;
+      color: $col-neutral-text;
+      font-size: $text-body;
+      font-weight: 300;
+      display: block;
+      line-height: 36px;
+      margin: 0 auto 18px;
+      padding: 0 14px;
+      outline: none;
+      height: 36px;
+      width: 306px;
+    }
+    .actions {
+      .btn-large {
+        cursor: pointer;
+        box-sizing: border-box;
+        background-color: $col-neutral-label;
+        border: none;
+        color: #fff;
+        height: 36px;
+        width: 306px;
+      }
+      .btn-large:disabled {
+        cursor: not-allowed;
+      }
+      .link {
+        color: $col-primary-blue;
+        cursor: pointer;
+        font-size: $text-caption;
+        line-height: 36px;
+      }
+    }
+    .warn-container {
+      display: block;
+      position: relative;
+      margin: 0 auto 10px;
+      text-align: center;
+      height: 26px;
+      width: 100%;
+      .warn-message {
+        font-size: $text-body;
+        color: $col-primary-red;
+        line-height: 26px;
+        position: relative;
+      }
+      .fa-close {
+        color: $col-neutral-placeholder;
+        cursor: pointer;
+        font-size: 16px;
+        position: absolute;
+        right: -20px;
+        top: 0;
+        z-index: 2;
+      }
+    }
+  }
+}

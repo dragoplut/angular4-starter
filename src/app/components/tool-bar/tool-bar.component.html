@@ -1,0 +1,26 @@
+<div class="toolbar-container" *ngIf="currentUser">
+  <div class="app-logo" (click)="goBack()">
+    APP LOGO
+  </div>
+  <div class="tool-bar-list-container">
+    <a class="top-menu-item"
+       [routerLink]="page.routerLink"
+       [routerLinkActiveOptions]= "{exact: false}"
+       [hidden]="!isAllowedAction('view', page.permissionRef)"
+       routerLinkActive="active"
+       *ngFor="let page of pagesList"
+       (click)="page.listTitle === 'Signout' ? signOut() : false"
+    >
+      {{ page.listTitle }}
+    </a>
+    <a class="top-menu-item pull-right"
+       [routerLink]="['', 'signin']"
+       [routerLinkActiveOptions]= "{exact: false}"
+       routerLinkActive="active"
+       (click)="signOut()"
+    >
+      Log out <fa name="sign-out" size="lg" aria-hidden="true"></fa>
+    </a>
+  </div>
+  <span class="toolbar-spacer"></span>
+</div>
