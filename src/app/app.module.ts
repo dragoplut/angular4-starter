@@ -20,6 +20,8 @@ import { DataTableModule } from "angular2-datatable";
 import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
 import { MomentModule } from 'angular2-moment';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateService } from '@ngx-translate/core';
+import { AppTranslationModule } from './app.translation.module';
 
 /*
  * Platform and Environment providers/directives/pipes
@@ -68,6 +70,7 @@ type StoreType = {
    */
   imports: [
     AngularFontAwesomeModule,
+    AppTranslationModule,
     BrowserModule,
     BrowserAnimationsModule,
     DataTableModule,

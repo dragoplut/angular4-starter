@@ -1,12 +1,11 @@
+<div class="lang-selector-absolute-container"><lang-selector></lang-selector></div>
 <div class="auth row center-xs middle-xs">
   <form
       class="signin-form col-xs-6 shadow-2"
       #authForm="ngForm"
       (submit)="authenticate()"
   >
-    <div class="title-container">
-      APP TITLE
-    </div>
+    <div class="title-container" translate>{{'login.title'}}</div>
     <div class="warn-container">
       <span *ngIf="errorMessage" class="warn-message">
         {{errorMessage}}
@@ -15,39 +14,43 @@
     </div>
     <div class="clear-container">
       <input
+        translate
         autofocus="!email"
         type="email"
         name="email"
         required
         [(ngModel)]="user.email"
-        placeholder="Email"
+        [placeholder]="'login.email_placeholder' | translate"
         #email="ngModel"
         autoComplete="new-email"
       >
       <input
         required
+        translate
         type="password"
         name="password"
         [(ngModel)]="user.password"
-        placeholder="Password"
+        [placeholder]="'login.password_placeholder' | translate"
         #password="ngModel"
         autoComplete="new-password"
       >
     </div>
     <div class="actions col-xs-12">
       <button
+        translate
         type="submit"
         class="btn-large"
         [disabled]="!authForm.form.valid"
       >
-        SIGN IN
+        {{'login.sign_in'}}
       </button>
       <div class="auth-links-container">
         <a
+          translate
           class="link"
           (click)="goToReset()"
         >
-          Forgotten password ?
+          {{'login.forgot_password'}}
         </a>
       </div>
     </div>

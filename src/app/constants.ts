@@ -15,6 +15,8 @@ export const TABLE_UPDATE_TIMEOUT: number = 300000; // 300000 === 300 sec. === 5
 export const DEFAULT_ERROR_MESSAGE: string = 'Some error occurs.';
 export const DEFAULT_SUCCESS_MESSAGE: string = 'Changes saved.';
 
+export const LANG_KEY: string = 'app_lang';
+
 export const PAGES_LIST: [object] = [
   {
     listTitle: 'Users',
